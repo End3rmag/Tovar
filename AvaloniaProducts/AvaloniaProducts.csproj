@@ -1,0 +1,67 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="basket.png" />
+    <None Remove="basket1.png" />
+    <None Remove="basket2.png" />
+    <None Remove="done.png" />
+    <None Remove="images\hp.jpg" />
+    <None Remove="LoadingImages\Assets\hp.jpg" />
+    <None Remove="LoadingImages\Assets\ip.jpg" />
+    <None Remove="LoadingImages\Assets\pib.png" />
+    <None Remove="LoadingImages\Assets\pinb.jpg" />
+    <None Remove="return.png" />
+    <None Remove="Sourse\free-icon-close-3945547.png" />
+    <None Remove="Sourse\free-icon-cross-6711656.png" />
+    <None Remove="Sourse\free-icon-trash-can-542724.png" />
+    <None Remove="Sourse\free-icon-undo-4147237.png" />
+    <None Remove="Sourse\minus.png" />
+    <None Remove="Sourse\plus.png" />
+    <None Remove="Sourse\Setting.png" />
+    <None Remove="trash.png" />
+    <None Remove="trash1.png" />
+    <None Remove="trash2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AvaloniaResource Include="Sourse\basket.png" />
+    <AvaloniaResource Include="Sourse\basket1.png" />
+    <AvaloniaResource Include="Sourse\basket2.png" />
+    <AvaloniaResource Include="Sourse\done.png" />
+    <AvaloniaResource Include="images\hp.jpg" />
+    <AvaloniaResource Include="LoadingImages\Assets\hp.jpg" />
+    <AvaloniaResource Include="LoadingImages\Assets\ip.jpg" />
+    <AvaloniaResource Include="LoadingImages\Assets\pib.png" />
+    <AvaloniaResource Include="LoadingImages\Assets\pinb.jpg" />
+    <AvaloniaResource Include="Sourse\free-icon-close-3945547.png" />
+    <AvaloniaResource Include="Sourse\free-icon-cross-6711656.png" />
+    <AvaloniaResource Include="Sourse\free-icon-trash-can-542724.png" />
+    <AvaloniaResource Include="Sourse\free-icon-undo-4147237.png" />
+    <AvaloniaResource Include="Sourse\icons8-AddToCard-48.png" />
+    <AvaloniaResource Include="Sourse\minus.png" />
+    <AvaloniaResource Include="Sourse\plus.png" />
+    <AvaloniaResource Include="Sourse\return.png" />
+    <AvaloniaResource Include="Sourse\Setting.png" />
+    <AvaloniaResource Include="Sourse\trash.png" />
+    <AvaloniaResource Include="Sourse\trash1.png" />
+    <AvaloniaResource Include="Sourse\trash2.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="11.2.1" />
+    <PackageReference Include="Avalonia.Desktop" Version="11.2.1" />
+    <PackageReference Include="Avalonia.Themes.Fluent" Version="11.2.1" />
+    <PackageReference Include="Avalonia.Fonts.Inter" Version="11.2.1" />
+    <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
+    <PackageReference Include="Avalonia.Diagnostics" Version="11.2.1">
+      <IncludeAssets Condition="'$(Configuration)' != 'Debug'">None</IncludeAssets>
+      <PrivateAssets Condition="'$(Configuration)' != 'Debug'">All</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+</Project>

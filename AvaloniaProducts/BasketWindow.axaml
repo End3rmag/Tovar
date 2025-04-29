@@ -1,0 +1,55 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		xmlns:local="clr-namespace:AvaloniaProducts"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="AvaloniaProducts.BasketWindow"
+        Title="BasketWindow">
+
+	<Grid ColumnDefinitions="*,300,*" RowDefinitions="*,350,*">
+		<Border Grid.Column="1" Grid.Row="1" Background="Purple" Width="275" Height="335" CornerRadius="20">
+			<Border Background="Lavender" Width="260" Height="300" CornerRadius="20" Margin="0 0 0 20">
+				<StackPanel Orientation="Vertical">
+					<Panel>
+						<TextBlock Text="Корзина" FontWeight="Bold" FontSize="24" Margin="10" HorizontalAlignment="Center" />
+						<Button Content="Перейти в корзину" Background="PeachPuff" Margin="-6,-35,0,0" Cursor="Hand" CornerRadius="20" Width="25" Height="25" Click="Return_Click">
+							<Image Source="/Sourse/free-icon-undo-4147237.png" Width="15" Height="15" />
+						</Button>
+					</Panel>
+					<Panel>
+						<ListBox Name="BasketListBox" Width="260" Height="248" CornerRadius="20" SelectionMode="Single">
+							<ListBox.ItemTemplate>
+								<DataTemplate DataType="local:Product">
+									<StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" Margin="0">
+										<Image Source="avares://AvaloniaProducts/images/hp.jpg" Height="50" HorizontalAlignment="Left"  />
+										<StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="0 5 0 0" Spacing="3">
+											<TextBlock Text="{Binding ProductName}" FontSize="15" VerticalAlignment="Center" Margin="5,0,0,0"/>
+											<TextBlock Text="=" FontSize="15" VerticalAlignment="Center" Margin="5,0"/>
+											<TextBlock Text="{Binding ProductCost, StringFormat={}{0} руб.}" FontSize="15" VerticalAlignment="Center" Margin="5,0"/>
+										</StackPanel>
+										<StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0 5 0 0">
+											<Button Click="RemoveOneFromBasket_Click" Background="Transparent" Cursor="Hand" >
+												<Image Source="/Sourse/minus.png" Width="20" Height="20"/>
+											</Button>
+											<TextBlock Text="{Binding ProductQuantity}" Width="30" FontSize="15" Margin="7" VerticalAlignment="Center"/>
+											<Button Click="AddMoreToBasket_Click" Background="Transparent" Cursor="Hand" >
+												<Image Source="/Sourse/plus.png" Width="20" Height="20"/>
+											</Button>
+											<Button Click="RemoveFromBasket_Click" Cursor="Hand" Background="Transparent" VerticalAlignment="Center">
+												<Image Source="avares://AvaloniaProducts/Sourse/free-icon-trash-can-542724.png" Width="15" Height="15"/>
+											</Button>
+										</StackPanel>
+									</StackPanel>
+								</DataTemplate>
+							</ListBox.ItemTemplate>
+						</ListBox>
+					</Panel>
+					<Border Margin="-40 4.5 0 0" CornerRadius="20" Width="220" Height="22" Background="PeachPuff">
+						<TextBlock x:Name="TotalTextBlock" Text="Итого: 0 ₽" FontSize="16" HorizontalAlignment="Left" Margin="20 0 0 5" />
+					</Border>
+				</StackPanel>
+			</Border>
+		</Border>
+	</Grid>
+</Window>

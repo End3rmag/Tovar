@@ -1,0 +1,31 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="AvaloniaProducts.WinEditProduct"
+        Title="Редактирование продукта">
+	<Grid ColumnDefinitions="*,300,*" RowDefinitions="*,350,*" >
+		<Border Grid.Column="1" Grid.Row="1" Background="DimGray" Width="275" Height="315" CornerRadius="20">
+			<Border Background="Bisque" Width="260" Height="300" CornerRadius="20">
+	<StackPanel >
+		<Panel>
+			<Button Name="ReturnButton" Cursor="Hand" CornerRadius="20" Width="25" Height="25" HorizontalAlignment="Left" Background="PeachPuff" Margin="-6 -23 0 0" Click="Return_Click">
+				<Image Source="/Sourse/free-icon-undo-4147237.png" Width="15" Height="15"/>
+			</Button>
+			<TextBlock VerticalAlignment="Top" Text="Редактрование товара" FontWeight="Bold" FontSize="17" Margin="0,15,0,0" HorizontalAlignment="Center"/>
+		</Panel>
+		<TextBlock Text="Введите название продукта:" FontSize="15" Margin="16,20,0,0"/>
+		<TextBox Name="ProductNameTextBox" Width="220" Watermark="введите название..." BorderThickness="1" />
+
+		<TextBlock Text="Введите цену продукта:" FontSize="15"  Margin="16,10,0,0"/>
+		<TextBox Name="ProductCostTextBox" Width="220" Watermark="введите название..." BorderThickness="1" />
+		
+		<TextBlock Text="Введите количество продуктов:" FontFamily="Wellingthon" FontSize="15" Margin="16,10,0,0"/>
+		<TextBox Name="ProductQuantityTextBox" Width="220" Watermark="введите количество..."  BorderThickness="1" />
+		<Panel>
+		<Button Name="SaveButton" Cursor="Hand" HorizontalAlignment="Center" Content="Сохранить" Width="105" Height="35" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="16" Margin="5 15 5 5" Click="SaveChanges_Click"/>
+		
+		</Panel>
+			</StackPanel>
+			</Border>
+		</Border>
+	</Grid>
+</Window>
