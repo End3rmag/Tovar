@@ -7,8 +7,8 @@
         Title="AvaloniaProducts">
 
 	<Grid ColumnDefinitions="*,300,*" RowDefinitions="*,350,*" >
-		<Border Grid.Column="1" Grid.Row="1" Background="DimGray" Width="275" Height="315" CornerRadius="20">
-			<Border Background="Bisque" Width="260" Height="300" CornerRadius="20">
+		<Border Grid.Column="1" Grid.Row="1" Background="DimGray" Width="275" Height="415" CornerRadius="20">
+			<Border Background="Bisque" Width="260" Height="400" CornerRadius="20">
 				<StackPanel>
 				<TextBlock Text="Добавление продуктов" FontWeight="Bold" FontSize="18"  Margin="0 20 0 0" HorizontalAlignment="Center"/>
 				<TextBlock Name="TextName" Text="Наименование продукта"  FontWeight="Bold" Margin="16,20,0,0"/>
@@ -18,7 +18,7 @@
 				<TextBlock Name="TextQuantity" Text="Колличество:" FontWeight="Bold" Margin="16,10,0,0"/>
 				<TextBox Name="TextBoxQuantity" Watermark="введите количество..."  Width="220" Margin="0,5,0,0"  BorderThickness="1" />
 					<Panel>
-				<Button Name="btnAddProduct" Cursor="Hand" Content="Добавить"  Height="30" Width="105" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="20,15,0,0" Click="BtnAddProduct_Click" />
+				<Button Name="btnAddProduct" Cursor="Hand" Content="Добавить товар"  Height="30" Width="105" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="20,15,0,0" Click="BtnAddProduct_Click" />
 				<Button Name="btnShowAllProducts" Cursor="Hand" Content="Список"  Height="30" Width="105" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"  Margin="135,15,0,0" Click="BtnShowAllProducts_Click"/>
 					</Panel>
 						</StackPanel>

@@ -10,6 +10,7 @@
 		<Border Grid.Column="1" Grid.Row="1" Background="Purple" Width="275" Height="315" CornerRadius="20">
 			<Border Background="Lavender" Width="260" Height="300" CornerRadius="20">
 				<StackPanel>
+					
 					<Panel> 
 						<TextBlock Text="Список Продуктов" HorizontalAlignment="Center" FontWeight="Bold" FontSize="18" Margin="0,15,0,0" />
 						<Button Content="Перейти в корзину" Background="PeachPuff" Margin="-6,-25,0,0" Cursor="Hand" CornerRadius="20" Width="25" Height="25" Click="Return_Click">
@@ -19,36 +20,43 @@
 							<Image Source="/Sourse/basket1.png" Width="15" Height="15"/>
 						</Button>
 					</Panel>
+					
 					<ListBox Name="ProductListBox" Width="260" Height="263" CornerRadius="20" Background="Lavender" SelectionMode="Single">
 						<ListBox.ItemTemplate>
 							<DataTemplate DataType="local:Product">
 								<StackPanel Orientation="Vertical" >
-									
+									<Image Source="{Binding ProductImage}"/>
 									<TextBlock Text="{Binding ProductName}" FontSize="15" VerticalAlignment="Top"/>
+									
 									<StackPanel Orientation="Horizontal" >
 										<TextBlock Text="Цена:" FontSize="15" />
 										<TextBlock Text="{Binding ProductCost, StringFormat={}{0} руб.}" FontSize="15" Margin="5,0,0,0"/>
 										<TextBlock Text=" Кол-во:" FontSize="15" Margin="5,0,0,0"/>
 										<TextBlock Text="{Binding ProductQuantity, StringFormat={}{0} шт.}" FontSize="15" Margin="5,0,0,0"/>
 									</StackPanel>
+									
 									<StackPanel Orientation="Horizontal" HorizontalAlignment="Left"  >
+										
 										<Button Click="AddToBasket_Click" x:Name="basketButton" Margin="0 5 0 0" Background="Transparent" Cursor="Hand" >
 											<Image x:Name="BasketImage" Source="avares://AvaloniaProducts/Sourse/icons8-AddToCard-48.png" Height="20"/>
 										</Button>
+										
 										<Button Click="Edit_Click" Background="Transparent" Cursor="Hand" Height="33" HorizontalContentAlignment="Center" Margin="5,5,0,0">
 											<Image Source="avares://AvaloniaProducts/Sourse/Setting.png"  Width="15" Height="15"/>
 										</Button>
+										
 										<Button Click="Del_Click" Cursor="Hand" Background="Transparent" Margin="5,5,0,0">
 											<Image Source="avares://AvaloniaProducts/Sourse/free-icon-trash-can-542724.png" Width="15" Height="15" x:Name="BasketImage1"/>
 										</Button>
+										
 									</StackPanel>
+									
 								</StackPanel>
 							</DataTemplate>
 						</ListBox.ItemTemplate>
 					</ListBox>
-					
 				</StackPanel>
+			</Border>
 		</Border>
-		</Border>
-		</Grid>
+	</Grid>
 </Window>

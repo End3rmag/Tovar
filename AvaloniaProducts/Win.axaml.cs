@@ -12,7 +12,7 @@ public partial class Win : Window
 {
     public List<Product> Products => ProductList.Instance.Products;
     private BasketList basketList = BasketList.Instance;
-    public Bitmap? ImageFromBinding { get; } = ImageHelper.LoadFromResources(new Uri("avares://AvaloniaProducts/LoadingImages/Assets/hp.jpg"));
+   
 
 
     public Win()

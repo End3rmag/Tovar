@@ -483,3 +483,4 @@ C:\Users\blockchain\Desktop\AvaloniaProducts-main\AvaloniaProducts\bin\Debug\net
 C:\Users\blockchain\Desktop\AvaloniaProducts-main\AvaloniaProducts\obj\Debug\net8.0\Avalonia.996F5F03.Up2Date
 C:\Users\blockchain\Desktop\AvaloniaProducts-main\AvaloniaProducts\obj\Debug\net8.0\AvaloniaProducts.genruntimeconfig.cache
 C:\Users\blockchain\Desktop\AvaloniaProducts-main\AvaloniaProducts\obj\Debug\net8.0\ref\AvaloniaProducts.dll
+C:\Users\blockchain\Desktop\AvaloniaProducts-main\AvaloniaProducts\obj\Debug\net8.0\AvaloniaProducts.sourcelink.json

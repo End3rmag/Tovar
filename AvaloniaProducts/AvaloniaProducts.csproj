@@ -8,15 +8,17 @@
     <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
   </PropertyGroup>
   <ItemGroup>
+    <AvaloniaXaml Remove="LoadingImages\**" />
+    <Compile Remove="LoadingImages\**" />
+    <EmbeddedResource Remove="LoadingImages\**" />
+    <None Remove="LoadingImages\**" />
+  </ItemGroup>
+  <ItemGroup>
     <None Remove="basket.png" />
     <None Remove="basket1.png" />
     <None Remove="basket2.png" />
     <None Remove="done.png" />
-    <None Remove="images\hp.jpg" />
-    <None Remove="LoadingImages\Assets\hp.jpg" />
-    <None Remove="LoadingImages\Assets\ip.jpg" />
-    <None Remove="LoadingImages\Assets\pib.png" />
-    <None Remove="LoadingImages\Assets\pinb.jpg" />
+    <None Remove="Images\hp.jpg" />
     <None Remove="return.png" />
     <None Remove="Sourse\free-icon-close-3945547.png" />
     <None Remove="Sourse\free-icon-cross-6711656.png" />
@@ -30,15 +32,8 @@
     <None Remove="trash2.png" />
   </ItemGroup>
   <ItemGroup>
-    <AvaloniaResource Include="Sourse\basket.png" />
     <AvaloniaResource Include="Sourse\basket1.png" />
-    <AvaloniaResource Include="Sourse\basket2.png" />
-    <AvaloniaResource Include="Sourse\done.png" />
-    <AvaloniaResource Include="images\hp.jpg" />
-    <AvaloniaResource Include="LoadingImages\Assets\hp.jpg" />
-    <AvaloniaResource Include="LoadingImages\Assets\ip.jpg" />
-    <AvaloniaResource Include="LoadingImages\Assets\pib.png" />
-    <AvaloniaResource Include="LoadingImages\Assets\pinb.jpg" />
+    <AvaloniaResource Include="Images\hp.jpg" />
     <AvaloniaResource Include="Sourse\free-icon-close-3945547.png" />
     <AvaloniaResource Include="Sourse\free-icon-cross-6711656.png" />
     <AvaloniaResource Include="Sourse\free-icon-trash-can-542724.png" />
@@ -46,11 +41,7 @@
     <AvaloniaResource Include="Sourse\icons8-AddToCard-48.png" />
     <AvaloniaResource Include="Sourse\minus.png" />
     <AvaloniaResource Include="Sourse\plus.png" />
-    <AvaloniaResource Include="Sourse\return.png" />
     <AvaloniaResource Include="Sourse\Setting.png" />
-    <AvaloniaResource Include="Sourse\trash.png" />
-    <AvaloniaResource Include="Sourse\trash1.png" />
-    <AvaloniaResource Include="Sourse\trash2.png" />
   </ItemGroup>
 
   <ItemGroup>

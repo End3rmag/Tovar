@@ -22,7 +22,7 @@
 							<ListBox.ItemTemplate>
 								<DataTemplate DataType="local:Product">
 									<StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" Margin="0">
-										<Image Source="avares://AvaloniaProducts/images/hp.jpg" Height="50" HorizontalAlignment="Left"  />
+										<Image Source="{Binding ProductImage}"   />
 										<StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="0 5 0 0" Spacing="3">
 											<TextBlock Text="{Binding ProductName}" FontSize="15" VerticalAlignment="Center" Margin="5,0,0,0"/>
 											<TextBlock Text="=" FontSize="15" VerticalAlignment="Center" Margin="5,0"/>
