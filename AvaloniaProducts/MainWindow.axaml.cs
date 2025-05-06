@@ -19,8 +19,9 @@ public partial class MainWindow : Window
 
     private async void BtnAddPicture_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
     {
+       
 
-        var openFileDialog = new OpenFileDialog();
+    var openFileDialog = new OpenFileDialog();
         openFileDialog.Filters.Add(new FileDialogFilter()
         {
             Name = "Images",
@@ -36,7 +37,8 @@ public partial class MainWindow : Window
             {
                 Directory.CreateDirectory(folderPath);
             }
-            _selectedImageFileName = $"photo_{Guid.NewGuid()}.jpg";
+            Random random = new Random();
+            _selectedImageFileName = "photo" + random.Next(1, 1000000000) + ".jpg";
             string destPath = Path.Combine(folderPath, _selectedImageFileName);
             File.Copy(selectedFile, destPath, true);
         }
