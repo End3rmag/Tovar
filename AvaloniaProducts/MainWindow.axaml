@@ -7,8 +7,8 @@
         Title="AvaloniaProducts">
 
 	<Grid ColumnDefinitions="*,300,*" RowDefinitions="*,350,*" >
-		<Border Grid.Column="1" Grid.Row="1" Background="DimGray" Width="275" Height="415" CornerRadius="20">
-			<Border Background="Bisque" Width="260" Height="400" CornerRadius="20">
+		<Border Grid.Column="1" Grid.Row="1" Background="DimGray" Width="275" Height="335" CornerRadius="20">
+			<Border Background="Bisque" Width="260" Height="320" CornerRadius="20">
 				<StackPanel>
 				<TextBlock Text="Добавление продуктов" FontWeight="Bold" FontSize="18"  Margin="0 20 0 0" HorizontalAlignment="Center"/>
 				<TextBlock Name="TextName" Text="Наименование продукта"  FontWeight="Bold" Margin="16,20,0,0"/>
@@ -18,11 +18,18 @@
 				<TextBlock Name="TextQuantity" Text="Колличество:" FontWeight="Bold" Margin="16,10,0,0"/>
 				<TextBox Name="TextBoxQuantity" Watermark="введите количество..."  Width="220" Margin="0,5,0,0"  BorderThickness="1" />
 					<Panel>
-				<Button Name="btnAddProduct" Cursor="Hand" Content="Добавить товар"  Height="30" Width="105" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="20,15,0,0" Click="BtnAddProduct_Click" />
-				<Button Name="btnShowAllProducts" Cursor="Hand" Content="Список"  Height="30" Width="105" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"  Margin="135,15,0,0" Click="BtnShowAllProducts_Click"/>
+				<Button Name="btnAddProduct" Cursor="Hand" Height="40" Width="50" VerticalContentAlignment="Center" Background="Transparent" HorizontalContentAlignment="Center" Margin="50,15,0,0" Click="BtnAddProduct_Click">
+					<Image Source="/Sourse/add.png" Width="35" Height="35"	/>
+				</Button>
+				<Button Name="btnShowAllProducts" Cursor="Hand" Height="40" Width="50" Background="Transparent" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"  Margin="150,15,0,0" Click="BtnShowAllProducts_Click">
+					<Image Source="/Sourse/list.png" Width="30" Height="30"	/>
+				</Button>
+				<Button Name="addPictures" Cursor="Hand" Height="40" Width="50" Background="Transparent" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"  Margin="100,15,0,0" Click="BtnAddPicture_Click">
+							<Image Source="avares://AvaloniaProducts/Sourse/picture.png" Width="35" Height="35"/>
+						</Button>
 					</Panel>
-						</StackPanel>
-		</Border>
+				</StackPanel>
+			</Border>
 		</Border>
 	</Grid>
 </Window>

@@ -22,9 +22,9 @@ namespace AvaloniaProducts
             }
         }
 
-        public void AddProduct(string productName, double productCost, int productQuantity )
+        public void AddProduct(string productName, double productCost, int productQuantity, string productPhoto)
         {
-            Products.Add(new Product { ProductName = productName, ProductCost = productCost, ProductQuantity = productQuantity });
+            Products.Add(new Product { ProductName = productName, ProductCost = productCost, ProductQuantity = productQuantity, Image = productPhoto });
         }
 
         public void RemoveProduct(Product product)

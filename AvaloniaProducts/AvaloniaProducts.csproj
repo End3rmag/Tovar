@@ -20,11 +20,17 @@
     <None Remove="done.png" />
     <None Remove="Images\hp.jpg" />
     <None Remove="return.png" />
+    <None Remove="Sourse\add.png" />
+    <None Remove="Sourse\addlist.png" />
+    <None Remove="Sourse\AddToList.png" />
+    <None Remove="Sourse\basket.png" />
     <None Remove="Sourse\free-icon-close-3945547.png" />
     <None Remove="Sourse\free-icon-cross-6711656.png" />
     <None Remove="Sourse\free-icon-trash-can-542724.png" />
     <None Remove="Sourse\free-icon-undo-4147237.png" />
+    <None Remove="Sourse\list.png" />
     <None Remove="Sourse\minus.png" />
+    <None Remove="Sourse\picture.png" />
     <None Remove="Sourse\plus.png" />
     <None Remove="Sourse\Setting.png" />
     <None Remove="trash.png" />
@@ -32,14 +38,20 @@
     <None Remove="trash2.png" />
   </ItemGroup>
   <ItemGroup>
-    <AvaloniaResource Include="Sourse\basket1.png" />
+    <ApplicationDefinition Include="Sourse\AddToList.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AvaloniaResource Include="Sourse\add.png" />
+    <AvaloniaResource Include="Sourse\basket.png" />
     <AvaloniaResource Include="Images\hp.jpg" />
     <AvaloniaResource Include="Sourse\free-icon-close-3945547.png" />
     <AvaloniaResource Include="Sourse\free-icon-cross-6711656.png" />
     <AvaloniaResource Include="Sourse\free-icon-trash-can-542724.png" />
     <AvaloniaResource Include="Sourse\free-icon-undo-4147237.png" />
     <AvaloniaResource Include="Sourse\icons8-AddToCard-48.png" />
+    <AvaloniaResource Include="Sourse\list.png" />
     <AvaloniaResource Include="Sourse\minus.png" />
+    <AvaloniaResource Include="Sourse\picture.png" />
     <AvaloniaResource Include="Sourse\plus.png" />
     <AvaloniaResource Include="Sourse\Setting.png" />
   </ItemGroup>

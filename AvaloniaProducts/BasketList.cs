@@ -48,7 +48,10 @@ public bool AddToBasket(string productName, int productQuantityInBasket)
                 {
                     ProductName = productName,
                     ProductQuantity = availableToAdd,
-                    ProductCost = productInStore.ProductCost * availableToAdd
+                    ProductCost = productInStore.ProductCost * availableToAdd,
+                    Image = productInStore.Image
+
+
                 });
             }
 

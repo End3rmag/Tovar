@@ -18,7 +18,7 @@
 						</Button>
 					</Panel>
 					<Panel>
-						<ListBox Name="BasketListBox" Width="260" Height="248" CornerRadius="20" SelectionMode="Single">
+						<ListBox Name="BasketListBox" Width="260" Height="248" CornerRadius="20" SelectionMode="Single" Background="Transparent">
 							<ListBox.ItemTemplate>
 								<DataTemplate DataType="local:Product">
 									<StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" Margin="0">

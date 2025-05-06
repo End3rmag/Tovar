@@ -1,7 +1,9 @@
 ﻿using Avalonia.Controls;
 using Avalonia.Controls.Notifications;
 using Avalonia.Interactivity;
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 
 namespace AvaloniaProducts
@@ -15,6 +17,10 @@ namespace AvaloniaProducts
             InitializeComponent();
             BasketListBox.ItemsSource = Basket;
             UpdateTotal();
+            foreach (var product in Basket)
+            {
+                Console.WriteLine($"Product: {product.ProductName}, Image property: '{product.Image}'");
+            }
         }
 
         private double CalculateTotal()
