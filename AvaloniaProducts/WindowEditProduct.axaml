@@ -1,30 +1,48 @@
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+		xmlns:local="clr-namespace:AvaloniaProducts"
         x:Class="AvaloniaProducts.WinEditProduct"
-        Title="Редактирование продукта">
-	<Grid ColumnDefinitions="*,300,*" RowDefinitions="*,350,*" >
-		<Border Grid.Column="1" Grid.Row="1" Background="DimGray" Width="275" Height="315" CornerRadius="20">
+        Title="WinEditProduct">
+	<Grid ColumnDefinitions="*,300,*" RowDefinitions="*,350,*">
+		<Border Grid.Column="1" Grid.Row="1"  Background="DimGray" Width="275" Height="315" CornerRadius="20" HorizontalAlignment="Right">
 			<Border Background="Bisque" Width="260" Height="300" CornerRadius="20">
-	<StackPanel >
-		<Panel>
-			<Button Name="ReturnButton" Cursor="Hand" CornerRadius="20" Width="25" Height="25" HorizontalAlignment="Left" Background="PeachPuff" Margin="-6 -23 0 0" Click="Return_Click">
-				<Image Source="/Sourse/free-icon-undo-4147237.png" Width="15" Height="15"/>
-			</Button>
-			<TextBlock VerticalAlignment="Top" Text="Редактрование товара" FontWeight="Bold" FontSize="17" Margin="0,15,0,0" HorizontalAlignment="Center"/>
-		</Panel>
-		<TextBlock Text="Введите название продукта:" FontSize="15" Margin="16,20,0,0"/>
-		<TextBox Name="ProductNameTextBox" Width="220" Watermark="введите название..." BorderThickness="1" />
+				<StackPanel>
+					<Panel>
+						<Button Name="ReturnButton" Cursor="Hand" CornerRadius="20" Width="25" Height="25" HorizontalAlignment="Left" Background="PeachPuff" Margin="-6 -23 0 0" Click="Return_Click">
+							<Image Source="/Sourse/free-icon-undo-4147237.png" Width="15" Height="15"/>
+						</Button>
+						<TextBlock VerticalAlignment="Top" Text="Редактрование товара" FontWeight="Bold" FontSize="17" Margin="0,15,0,0" HorizontalAlignment="Center"/>
+					</Panel>
+					<TextBlock Text="Введите название продукта:" FontSize="15" Margin="16,20,0,0"/>
+					<TextBox Name="ProductNameTextBox" Width="220" Watermark="введите название..." BorderThickness="1" />
 
-		<TextBlock Text="Введите цену продукта:" FontSize="15"  Margin="16,10,0,0"/>
-		<TextBox Name="ProductCostTextBox" Width="220" Watermark="введите название..." BorderThickness="1" />
+					<TextBlock Text="Введите цену продукта:" FontSize="15"  Margin="16,10,0,0"/>
+					<TextBox Name="ProductCostTextBox" Width="220" Watermark="введите название..." BorderThickness="1" />
 		
-		<TextBlock Text="Введите количество продуктов:" FontFamily="Wellingthon" FontSize="15" Margin="16,10,0,0"/>
-		<TextBox Name="ProductQuantityTextBox" Width="220" Watermark="введите количество..."  BorderThickness="1" />
-		<Panel>
-		<Button Name="SaveButton" Cursor="Hand" HorizontalAlignment="Center" Content="Сохранить" Width="105" Height="35" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="16" Margin="5 15 5 5" Click="SaveChanges_Click"/>
-		
-		</Panel>
-			</StackPanel>
+					<TextBlock Text="Введите количество продуктов:" FontFamily="Wellingthon" FontSize="15" Margin="16,10,0,0"/>
+					<TextBox Name="ProductQuantityTextBox" Width="220" Watermark="введите количество..."  BorderThickness="1" />
+					<Panel>
+						<Button Name="SaveButton" Cursor="Hand" HorizontalAlignment="Center" Content="Сохранить" Width="105" Height="35" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="16" Margin="5 15 5 5" Click="SaveChanges_Click"/>
+					</Panel>
+				</StackPanel>
+			</Border>
+		</Border>
+		<Border Grid.Column="2" Grid.Row="1" Background="DimGray" Width="235" Height="245" CornerRadius="20" Margin="-7 0 0 0 " HorizontalAlignment="Left">
+			<Border Background="Bisque" Width="220" Height="230" CornerRadius="20">
+				<StackPanel>
+					<Image Name="ProductsImage"/>
+					<Panel >
+						<Button Name="DeletePhotoButton" Cursor="Hand" Background="Transparent" Margin="55,0,0,0" Click="Button_Click">
+							<Image Source="avares://AvaloniaProducts/Sourse/free-icon-trash-can-542724.png" Width="30" Height="30" x:Name="BasketImage1"/>
+						</Button>
+						<Button Name="ChangePhotoButton" Cursor="Hand" Height="40" Width="50" Background="Transparent" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"  Margin="120,2,0,0" Click="Button_Click_1">
+							<Image Source="avares://AvaloniaProducts/Sourse/picture.png" Width="40" Height="40"/>
+						</Button>
+					</Panel>
+				</StackPanel>
 			</Border>
 		</Border>
 	</Grid>

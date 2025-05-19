@@ -13,19 +13,19 @@ public class Product : INotifyPropertyChanged
     public int ProductQuantity { get; set; }
 
     private string? _imageFileName;
-    public string? Image
-    {
-        get => _imageFileName;
-        set
-        {
-            if (_imageFileName != value)
-            {
-                _imageFileName = value;
-                OnPropertyChanged(nameof(Image));
-                OnPropertyChanged(nameof(ProductImage));
-            }
-        }
-    }
+    public string? Image { get; set; }
+    //{
+    //    get => _imageFileName;
+    //     set
+    //    {
+    //        if (_imageFileName != value)
+    //        {
+    //            _imageFileName = value;
+    //            OnPropertyChanged(nameof(Image));
+    //            OnPropertyChanged(nameof(ProductImage));
+    //        }
+    //    }
+    //}
 
     public Bitmap? ProductImage
     {
